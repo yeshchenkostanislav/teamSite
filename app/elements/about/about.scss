@@ -1,0 +1,33 @@
+.about {
+  background: url(../img/unknown.png)no-repeat center/cover;
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 790px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: $gold;
+    font-size: 80px;
+    font-weight: 700;
+  }
+
+  &__text {
+    max-width: 650px;
+    color: $lighten;
+    margin: 40px 0 0 0;
+  }
+
+  &__text-paragraph {
+    line-height: 20px;
+
+    &:not(:first-child) {
+      margin: 20px 0 0 0;
+    }
+  }
+
+}

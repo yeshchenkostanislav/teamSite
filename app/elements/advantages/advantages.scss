@@ -1,0 +1,98 @@
+.advantages {
+  background: url(../img/unknown.png)no-repeat center/cover;
+  $root: &;
+
+  &__descr {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 790px;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 50px 0 0 0;
+    align-content: stretch;
+    min-height: 230px;
+  }
+
+  &__item {
+    flex-basis: 33%;
+
+    &:first-child {
+      #{$root} {
+        &__item-descr {
+          max-width: 185px;
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      #{$root} {
+        &__item-descr {
+          max-width: 135px;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      #{$root} {
+        &__item-descr {
+          max-width: 175px;
+        }
+      }
+    }
+
+    &:nth-child(4) {
+      #{$root} {
+        &__item-descr {
+          max-width: 200px;
+        }
+      }
+    }
+
+    &:nth-child(5) {
+      #{$root} {
+        &__item-descr {
+          max-width: 145px;
+        }
+      }
+    }
+
+    &:last-child {
+      #{$root} {
+        &__item-descr {
+          max-width: 205px;
+        }
+      }
+    }
+
+    &:nth-child(3-6) {
+      margin: 45px 0 0 0;
+    }
+  }
+
+  &__item-title {
+    color: $gold;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-descr {
+    margin: 15px 0 0 0;
+    padding: 0 0 0 27px;
+    max-width: 185px;
+    color: $lighten;
+    font-size: 13px;
+    line-height: 16px;
+    opacity: .7;
+  }
+}
+
+.advantages-svg {
+  margin: 0 10px 0 0;
+}

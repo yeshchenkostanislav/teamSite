@@ -49,10 +49,12 @@ let path = {
         svg_icons: 'app/elements/**/svg-icons/*.svg',
         fonts: 'app/fonts/**/*.*',
         vendor_js: [
-            'bower_components/jquery/dist/jquery.min.js'
+            'bower_components/jquery/dist/jquery.min.js',
+            'bower_components/swiper/dist/js/swiper.js'
         ],
         vendor_css: [
-            'bower_components/normalize-css/normalize.css'
+            'bower_components/normalize-css/normalize.css',
+            'bower_components/swiper/dist/css/swiper.css'
         ]
     },
     watch: {
@@ -109,13 +111,17 @@ gulp.task('scss', function () {
             })
         }))
         .pipe(replace('url(img/', 'url(../img/'))
-        .pipe(scss({outputStyle: 'compressed'}))
+        .pipe(scss({
+            outputStyle: 'compressed'
+        }))
         .pipe(replace('img/', '../img/'))
         .pipe(autoprefixer("last 10 version"))
         .pipe(rename('style.css'))
         .pipe(sourcemap.write(path.sourcemaps))
         .pipe(gulp.dest(path.build.css))
-        .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 gulp.task("js", function () {
@@ -132,7 +138,9 @@ gulp.task("js", function () {
         }))
         //.pipe(uglify())
         .pipe(gulp.dest(path.build.js))
-        .pipe(browserSync.reload({stream: true}))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
 });
 
 gulp.task('img', function () {
@@ -143,9 +151,13 @@ gulp.task('img', function () {
                 message: '<%= error.message %>'
             })
         }))
-        .pipe(rename({dirname: ''}))
+        .pipe(rename({
+            dirname: ''
+        }))
         .pipe(gulp.dest(path.build.img))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
 gulp.task('icons', function () {
@@ -156,9 +168,13 @@ gulp.task('icons', function () {
                 message: '<%= error.message %>'
             })
         }))
-        .pipe(rename({dirname: 'icons'}))
+        .pipe(rename({
+            dirname: 'icons'
+        }))
         .pipe(gulp.dest(path.build.img))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(browserSync.reload({
+            stream: true
+        }));
 });
 
 gulp.task('svg-icons', function () {
@@ -168,9 +184,13 @@ gulp.task('svg-icons', function () {
                 $('[fill^="#"]').removeAttr('fill');
                 $('[stroke^="#"]').removeAttr('stroke');
             },
-            parserOptions: {xmlMode: true}
+            parserOptions: {
+                xmlMode: true
+            }
         }))
-        .pipe(svgstore({inlineSvg: true}))
+        .pipe(svgstore({
+            inlineSvg: true
+        }))
         .pipe(gulp.dest(path.build.sprite))
 });
 
@@ -209,7 +229,9 @@ gulp.task('vendor:css', function () {
             })
         }))
         .pipe(concat('libs.min.css'))
-        .pipe(cssnano({zindex: false}))
+        .pipe(cssnano({
+            zindex: false
+        }))
         .pipe(gulp.dest(path.build.css));
 });
 

@@ -1,13 +1,79 @@
 .icon {
   display: inline-block;
+
   &.example-png-icon {
     background: url(img/icons/example.png);
     width: 30px;
     height: 30px;
   }
+
   &-example-svg-icon {
     width: 30px;
     height: 30px;
     fill: red;
+  }
+
+  // app/elements/common-elements/footer/svg-icons
+  &-twitter {
+    width: 17px;
+    height: 17px;
+    fill: $gold;
+  }
+
+  &-vk {
+    width: 17px;
+    height: 15px;
+    fill: $gold;
+  }
+
+  &-fb {
+    width: 17px;
+    height: 17px;
+    fill: $gold;
+  }
+
+  // app/elements/advantages/svg-icons
+  &-pencil {
+    width: 17px;
+    height: 17px;
+    fill: $gold;
+  }
+
+  &-ruler {
+    width: 17px;
+    height: 17px;
+    fill: $gold;
+  }
+
+  &-truck {
+    width: 17px;
+    height: 17px;
+    fill: $gold;
+  }
+
+  &-watch {
+    width: 17px;
+    height: 17px;
+    fill: $gold;
+  }
+
+  &-glasses {
+    width: 17px;
+    height: 17px;
+    fill: $gold;
+  }
+
+  &-diamond {
+    width: 17px;
+    height: 17px;
+    fill: $gold;
+  }
+
+  //app/elements/project/svg-icons
+  &-down-arrow {
+    width: 17px;
+    height: 14px;
+    fill: $lighten;
+
   }
 }

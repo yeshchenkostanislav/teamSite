@@ -1,8 +1,14 @@
 // Fonts
-$base-font: 'Arial', sans-serif;
+$base-font: 'Raleway',
+sans-serif;
 $base-font-size: 16px;
 
 $vk-color: #4a76a8;
 $fb-color: #3b5998;
 $in-color: #007cb7;
 $tg-color: #229ace;
+
+$gold: #baab8b;
+$lighten: lighten($gold, 20%);
+
+$t-time: .3s;
