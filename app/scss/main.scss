@@ -32,6 +32,11 @@ button {
   }
 }
 
+input {
+  outline: none;
+}
+
+
 .section {
   display: flex;
   justify-content: center;
@@ -47,7 +52,7 @@ button {
   &_full-hight {
     padding: 30px 0;
     height: 100vh;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
@@ -109,4 +114,5 @@ button {
 @import "../elements/about/about";
 @import "../elements/advantages/advantages";
 @import "../elements/project/project";
+@import "../elements/contact-us/contact-us";
 @import "../elements/common-elements/footer/footer";

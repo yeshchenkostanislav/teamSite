@@ -1,5 +1,5 @@
 .project {
-  background: url(../img/unknown.png)no-repeat center/cover;
+  background: url(img/unknown.png)no-repeat center/cover;
   $root: &;
 
   &__descr {
@@ -20,9 +20,7 @@
 
   &__item {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex: none;
+    align-items: center;
     position: relative;
 
     &:first-child {
@@ -59,11 +57,17 @@
   }
 
   &__item-text {
+    position: absolute;
     color: $gold;
     font-size: 12px;
     letter-spacing: 2px;
-    transform: translate(-12px, -10px) rotate(-90deg);
-    transform-origin: right;
+    transform: rotate(-90deg);
+    left: -6px;
+    top: 150px;
+    width: 165px;
+    transform-origin: left bottom;
+    text-align: right;
+
 
 
     &_light {
@@ -77,6 +81,7 @@
   &__img {
     width: 130px;
     height: 165px;
+    flex: none;
   }
 
   &__btn {

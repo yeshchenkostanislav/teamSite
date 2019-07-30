@@ -1,4 +1,10 @@
 .header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 35px;
+  z-index: 1000;
+
   &__wrap {
     flex-direction: row;
     justify-content: space-between;
@@ -90,5 +96,17 @@
 
   &_active {
     color: $lighten;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      height: 2px;
+      background: $lighten;
+      transition: $t-time;
+    }
   }
 }

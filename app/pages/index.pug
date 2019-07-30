@@ -3,6 +3,8 @@ html
     include ../elements/head/head
     +head('Page title', 'Page description', 'Page keywords')
     body
+        include ../elements/common-elements/header/header
+      
         .swiper-container
             .swiper-wrapper
                 .swiper-slide
@@ -15,7 +17,9 @@ html
                     include ../elements/advantages/advantages
                 .swiper-slide
                     include ../elements/project/project
-                    
+                .swiper-slide
+                    include ../elements/contact-us/contact-us                    
             .swiper-pagination
+        include ../elements/common-elements/footer/footer
         script(src="js/libs.min.js")
         script(src="js/custom.js")

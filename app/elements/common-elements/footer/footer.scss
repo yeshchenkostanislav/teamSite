@@ -1,4 +1,9 @@
 .footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 35px;
+  z-index: 1000;
 
   &__wrap {
     flex-direction: row;
